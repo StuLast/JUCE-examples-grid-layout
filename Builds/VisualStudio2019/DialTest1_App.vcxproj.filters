@@ -205,6 +205,9 @@
     <ClCompile Include="..\..\Source\Main.cpp">
       <Filter>DialTest1\Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ControlsComponent.cpp">
+      <Filter>DialTest1\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>DialTest1\Source</Filter>
     </ClCompile>
@@ -1390,6 +1393,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\MainComponent.h">
+      <Filter>DialTest1\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ControlsComponent.h">
       <Filter>DialTest1\Source</Filter>
     </ClInclude>
     <ClInclude Include="C:\JUCE\modules\juce_core\containers\juce_AbstractFifo.h">
