@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="ZWdw7E" name="DialTest1" projectType="guiapp" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1">
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="pjro4F" name="DialTest1">
     <GROUP id="{07E02D71-6638-85FD-041C-CE5894AA3392}" name="Source">
       <FILE id="pidhl8" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="aG4BLP" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="UU3XwO" name="ControlsComponent.cpp" compile="1" resource="0"
+            file="Source/ControlsComponent.cpp"/>
+      <FILE id="gBnUmC" name="ControlsComponent.h" compile="0" resource="0"
+            file="Source/ControlsComponent.h"/>
       <FILE id="fFBaZD" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
     </GROUP>
