@@ -26,6 +26,7 @@ public:
 
 private:
     juce::Slider dial1;
+    juce::Slider dial2;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ControlsComponent)
 };
