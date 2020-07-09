@@ -36,9 +36,14 @@ void ControlsComponent::paint (juce::Graphics& g)
 
 void ControlsComponent::resized()
 {
+    // 1. Instantiate a grid class
     juce::Grid grid;
     
+        // The track structure is an array to hold column or row definition data  
     using Track = juce::Grid::TrackInfo;
+
+    // Fr is a strucutre representing the "fraction" of the space available and is the relative working unit of the grid.
+    // Altertnatively - you can use pixels in the grid setup below
     using Fr = juce::Grid::Fr;
 
     //Setup grid with 1 row and 2 equally sized columns
@@ -49,7 +54,5 @@ void ControlsComponent::resized()
     grid.items = { juce::GridItem(dial1), juce::GridItem(dial2) };
 
     //Render the grid as described above in the space provided by local bounds
-
     grid.performLayout(getLocalBounds());
-
 }

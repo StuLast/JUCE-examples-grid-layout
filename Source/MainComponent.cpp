@@ -39,11 +39,10 @@ void MainComponent::resized()
     grid.templateRows = { Track(Fr(3)), Track(Fr(1)) };
     grid.templateColumns = { Track(Fr(1)) };
 
-    // Add items to grid.  Note that the controls component contains a grid layout of its own.
-    // This way we can combine the layout of components in isolation, and replicate as needed.
+    // Add items to grid.  Note that the ControlsComponenent.cpp contains a grid layout of its own.
+    // This way we can define the layout of components in isolation, and replicate as needed.
     grid.items = { juce::GridItem(), juce::GridItem(controls) };
 
     //Render the grid as described above in the space provided by local bounds
-
     grid.performLayout(getLocalBounds());
 }
