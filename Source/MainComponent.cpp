@@ -23,18 +23,24 @@ void MainComponent::paint (juce::Graphics& g)
 
 void MainComponent::resized()
 {
+    // 1. Instantiate a grid class
     juce::Grid grid;
 
-    using Track = juce::Grid::TrackInfo;  // the track structure is an array to hold column or row definition data
-    using Fr = juce::Grid::Fr;  //Fr is a "fraction" of the space available and is the working unit of the grid.
+    // The track structure is an array to hold column or row definition data
+    using Track = juce::Grid::TrackInfo;  
 
-    //Setup grid with 2 rows, with the space being "divided" by 4, then 3/4 being allocated to the top row
-    //and 1/4 being allocated to the bottom row
+    // Fr is a strucutre representing the "fraction" of the space available and is the relative working unit of the grid.
+    // Altertnatively - you can use pixels in the grid setup below
+    using Fr = juce::Grid::Fr;  
+    
+    // Setup grid with 2 rows, with the space being evenly "divided" by 4, 
+    // then 3/4 being allocated to the top row
+    // and 1/4 being allocated to the bottom row
     grid.templateRows = { Track(Fr(3)), Track(Fr(1)) };
     grid.templateColumns = { Track(Fr(1)) };
 
-    //add items to grid.  Note that the controls component contains a grid layout of its own.
-    //This way we can combine the layout of components in isolation, and replicate as needed.
+    // Add items to grid.  Note that the controls component contains a grid layout of its own.
+    // This way we can combine the layout of components in isolation, and replicate as needed.
     grid.items = { juce::GridItem(), juce::GridItem(controls) };
 
     //Render the grid as described above in the space provided by local bounds
